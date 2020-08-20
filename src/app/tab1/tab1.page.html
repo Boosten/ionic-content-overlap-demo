@@ -3,6 +3,11 @@
     <ion-title>
       Tab 1
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addItem()">
+        <ion-icon slot="end" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,5 +18,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card *ngFor="let card of cardItems; let i = index">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content: {{i}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
