@@ -1,0 +1,7 @@
+{
+  "name": "ionic-content-overlap-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
